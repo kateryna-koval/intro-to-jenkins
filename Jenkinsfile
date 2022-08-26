@@ -22,7 +22,7 @@ pipeline {
     }
     post {
         always {
-            mail to: 'kateryna.koval@ringteam.com',
+            mail to: 'eqv23i@gmail.com',
                  subject: "Pipeline: ${currentBuild.fullDisplayName}",
                  body: "Build URL ${env.BUILD_URL}"
         }

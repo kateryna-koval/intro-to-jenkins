@@ -21,10 +21,10 @@ pipeline {
         }
     }
     post {
-        always {
+        failure {
             mail to: 'eqv23i@gmail.com',
-                 subject: "Pipeline: ${currentBuild.fullDisplayName}",
-                 body: "Build URL ${env.BUILD_URL}"
+                 subject: "Failed Pipeline: ${currentBuild.fullDisplayName}",
+                 body: "Something is wrong with ${env.BUILD_URL}"
         }
     }
 }
